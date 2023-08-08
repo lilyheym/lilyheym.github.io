@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Lily R. Heym</title>
+        <link rel="stylesheet" type="text/css" href="HTML-and-CSS-Projects/portfolio/lilyportfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Github">Github</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks create space between navbar and first heading-->
+
+        <br>
+        <br>
+
+        <!--Background video-->
+
+        <div id="Home">
+            <video autoplay muted loop id="Hello_World">
+                <source src="img/video/hello_world.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+
+        <div class="Video_Text">
+            <h1 class="white-text">Lily R. Heym's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live</q>
+                    <br> -John Woods
+                    <br>
+                    <br>My name is Lily R. Heym. Welcome to my portfolio website. Here, I will tell you about my background and experience.
+                    <br>
+                    <br>Thanks for comming, enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+
+        <div class="Row" id="About">
+            <!--Left Column-->
+            <div class="Column_2">
+                <img src="img/portfolio1.jpg" alt="code with glasses cuz smart">
+            </div>
+            <!--Right Column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I have nothing to say because I haven't actually graduated yet.
+                    <br>
+                    <br>I am going to be a graduate of <a href="https://learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Bootcamp.
+                    <br>
+                    <br>I will be a full stack developer with way too much time to myself. <a href="#Contact">Contact</a>Please give me a job.
+                </p>
+            </div>
+        </div>
+        <!--Github Section-->
+
+        <div class="Row" id="Github">
+            <!--Left Column-->
+            <div class="Column_1">
+                <h1>Github</h1>
+                <p>
+                    My coding projects can be viewed on my Github profile here!:
+                    <br>
+                    <p class="center"><a href="https://github.com/lilyheym" target="_blank">Lily Heym Github</a></p>
+                </p>
+            </div>
+
+            <!--Right Column-->
+
+            <div class="Column_2"> 
+                <a href="https://github.com/lilyheym" target="_blank"><img src="img/github.jpg" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact Section-->
+
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="img/portfolio2.webp" alt="contact_image">
+            </div>
+            <!--Contact Form, right Column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--where and how to send form data-->
+                <form action="" method="POST"> <!--using third part services to submit contact data,endpoint goes in the action attribute-->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer Section-->
+        <footer>
+            <p>
+                <p class="center">&copy 2023 Lily R. Heym</p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
