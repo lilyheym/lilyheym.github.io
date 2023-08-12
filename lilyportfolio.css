@@ -38,8 +38,13 @@ p {
     font-size: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    color: white;
 }
 
+p:hover {
+    transition: transform 1s;
+    transform: scale(1.01);
+}
 
 .center {
     text-align: center;
@@ -247,9 +252,10 @@ footer {
  }
 
 
-input[type=submit] {
-    box-shadow: 0 0 5px rgb(1, 1, 41);
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset; 
 }
+
 
 input[type=submit] {
     background-color: black;
