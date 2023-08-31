@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <!--Head-->
+
+    <!-- Head -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
         <title>Lily R. Heym</title>
-        <link rel="stylesheet" type="text/css" href="lilyportfolio.css">
+        <link rel="shortcut icon" type="img/jpg" href="img/lilies.jpg">  <!-- HERE FOR ICON SHORTCUT!!!-->
+        <link rel="stylesheet" type="text/css" href="css/lilyportfolio.css">
     </head>
 
-    <!--Body-->
+    <!-- Body-->
     <body class="Background">
 
-        <!--Navbar-->
+        <!-- Navbar -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <!-- New section added -->
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
-            <a href="#Github">Github</a>
-            <a href="#Contact">Contact</a>
+            <a href="#GitHub">GitHub</a>
+            <!-- Onclick and ondbclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
-        <!--Breaks create space between navbar and first heading-->
-
-        <br>
-        <br>
-
-        <!--Background video-->
-
+        <!-- Background video -->
         <div id="Home">
             <video autoplay muted loop id="Hello_World">
                 <source src="img/video/hello_world.mp4" type="video/mp4">
@@ -50,8 +49,59 @@
             </strong>
         </div>
 
-        <!--About section-->
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/me.JPG" alt="Picture of me">
+                        <div class="text">I'm available to assist you on your project!<br> (or I will eventually, im so not making this public until i finish the program)</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/html,css,js.jpg" alt="HTML, CSS, amd JS logos">
+                        <div class="text">I am a full-stack developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/python-4785225_1280.jpg" alt="Python logo">
+                        <div class="text">the popular programing language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/newc.jpg" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/sql.jpg" alt="SQL logo">
+                        <div class="text">back end developement, databases, and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/software.jpg" alt="Contact me now!">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                    </div>
+                    <!-- Previous and next buttons-->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow and the dots -->
 
+                <!-- Slideshow dots (another way to navigate the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About section -->
         <div class="Row" id="About">
             <!--Left Column-->
             <div class="Column_2">
@@ -65,13 +115,13 @@
                     <br>
                     <br>I am going to be a graduate of <a href="https://learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Bootcamp.
                     <br>
-                    <br>I will be a full stack developer with way too much time to myself. Please <a href="#Contact">Contact</a>me and give me a job.
+                    <br>I will be a full stack developer with way too much time to myself. <a href="#Contact">Contact</a>Please give me a job.
                 </p>
             </div>
         </div>
         <!--Github Section-->
 
-        <div class="Row" id="Github">
+        <div class="Row" id="GitHub">
             <!--Left Column-->
             <div class="Column_1">
                 <h1>Github</h1>
@@ -89,35 +139,33 @@
             </div>
         </div>
 
-        <!--Contact Section-->
+        <!-- Contact Form -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xrgwkgaj" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message">
 
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="img/portfolio2.webp" alt="contact_image">
-            </div>
-            <!--Contact Form, right Column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--where and how to send form data-->
-                <form action="" method="POST"> <!--using third part services to submit contact data,endpoint goes in the action attribute-->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
-        </div>
-
-        <!--Footer Section-->
-        <footer>
-            <p>
-                <p class="center">&copy 2023 Lily R. Heym</p>
-                <br>
-            </p>
-        </footer>
-    </body>
-</html>
+            
+            <!-- Footer Section -->
+            <footer>
+                <p>
+                    <p class="center">&copy 2023 Lily R. Heym</p>
+                    <br>
+                </p>
+            </footer>
+            <script src="js/portfolio.js"></script>
+        </body>
+    </html>
